@@ -740,6 +740,20 @@ form .send-btn{
     .navlist.active {
         display: flex; 
     }
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
+    }
 }
 
 
@@ -833,6 +847,20 @@ form .send-btn{
         font-size: 22px;
        
     }
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
+    }
     .navlist .home,
     .navlist .about,
     .navlist .skills,
@@ -868,6 +896,20 @@ form .send-btn{
 }
 
 @media (max-width: 470px) {
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
+    }
     .checkbtn {
         font-size: 30px;
         color: white;
@@ -988,6 +1030,20 @@ form .send-btn{
     
     .navlist.active {
         display: flex; 
+    }
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
     }
 }
 @media (max-width: 390px) {
@@ -1095,6 +1151,20 @@ form .send-btn{
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto;
+    }
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
     }
     
     ul.navlist {
