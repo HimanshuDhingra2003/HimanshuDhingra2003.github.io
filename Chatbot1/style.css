@@ -1,0 +1,182 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: #212121;
+}
+
+/* Style for the heading section */
+.heading {
+    background-color: #212121; 
+    color: #fff;
+    padding: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+/* Style for the main heading */
+.mainhead {
+    font-size: 36px; 
+    margin: 0;
+}
+
+/* Style for the "Bot" span within the main heading */
+.mainhead span {
+    color: #ff5722; 
+}
+
+/* Style for the Login button */
+.login {
+    background-color: #ff5722; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+/* Hover effect for the Login button */
+.login:hover {
+    background-color: #ff7043; /* New background color on hover */
+}
+
+
+.chat img{
+    width: 50px;
+}
+
+.chat{
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.chat img{
+    width: 35px;
+    height: 35px;
+}
+
+.response{
+    background-color: black;
+    color: white;
+
+}
+
+.message-bar{
+    position: fixed;
+    bottom: 0;
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid black ;
+    background-color: black;
+}
+
+.message-bar .bar-wrapper{
+    background-color: #212121;
+    border-radius: 10px;
+    width: 60vw;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bar-wrapper input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #212121;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+.bar-wrapper input::placeholder{
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.message-bar button{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: orange;
+    cursor: pointer;
+
+}
+
+
+
+/* Tablets (728px width) */
+@media screen and (max-width: 728px) {
+    .chat {
+        font-size: 16px;
+        padding: 15px;
+    }
+    .chat img {
+        width: 30px;
+        height: 30px;
+    }
+    .message-bar {
+        height: 4rem;
+    }
+    .message-bar .bar-wrapper {
+        padding: 5px;
+    }
+}
+
+/* Common mobile(Android) (480px width) */
+@media screen and (max-width: 480px) {
+    .mainhead {
+        font-size: 24px;
+        padding: 10px;
+    }
+    .chat {
+        font-size: 14px;
+        padding: 10px;
+    }
+    .chat img {
+        width: 25px;
+        height: 25px;
+    }
+    .message-bar {
+        height: 3rem;
+    }
+    .message-bar .bar-wrapper {
+        padding: 5px;
+    }
+}
+
+/* iPhone 13 (828px width) */
+@media screen and (max-width: 828px) {
+    .chat {
+        font-size: 18px;
+        padding: 20px;
+    }
+    .chat img {
+        width: 35px;
+        height: 35px;
+    }
+    .message-bar {
+        height: 4rem;
+    }
+    .message-bar .bar-wrapper {
+        padding: 10px;
+    }
+}
