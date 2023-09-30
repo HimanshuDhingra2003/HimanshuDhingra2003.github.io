@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: orange;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 16px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Terms of Service</h1>
+
+        <p>Last Updated: 30/09/2023</p>
+
+        <h2>1. Introduction</h2>
+        <div class="content">
+            <p>Welcome toChatbot ("we," "our," or "us"). These Terms of Service govern your use of Chatbot and its services. Please read these terms carefully before using our chatbot.</p>
+        </div>
+
+        <h2>2. Acceptance of Terms</h2>
+        <div class="content">
+            <p>By using Chatbot, you agree to comply with and be bound by these Terms of Service. If you do not agree to these terms, please do not use our chatbot.</p>
+        </div>
+
+        <h2>3. User Responsibilities</h2>
+        <div class="content">
+            <p>Users are responsible for their interactions and content submitted through our chatbot. You agree not to use our chatbot for any illegal or harmful activities.</p>
+        </div>
+
+        <h2>4. Intellectual Property</h2>
+        <div class="content">
+            <p>All content and materials provided by [Your Chatbot Name] are protected by intellectual property laws. Users may not reproduce, distribute, or modify such content without permission.</p>
+        </div>
+
+        <h2>5. Termination</h2>
+        <div class="content">
+            <p>We reserve the right to terminate user access to our chatbot at our discretion if violations of these Terms of Service occur.</p>
+        </div>
+
+        <h2>6. Disclaimer</h2>
+        <div class="content">
+            <p>Chatbot provides information and assistance to the best of its abilities but makes no guarantees regarding accuracy or suitability for specific purposes.</p>
+        </div>
+
+        <h2>7. Contact Us</h2>
+        <div class="content">
+            <p>If you have any questions or concerns about these Terms of Service, please contact us at himdhi2003@gmail.com .</p>
+        </div>
+    </div>
+
+    <script>
+        
+        const toggleContent = document.querySelectorAll('h2');
+
+        toggleContent.forEach((item) => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
