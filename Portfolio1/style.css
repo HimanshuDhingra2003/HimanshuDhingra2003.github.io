@@ -8,7 +8,14 @@
     list-style: none;
     scroll-behavior: smooth;
 }
-
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #333; /* Adjust the background color as needed */
+  z-index: 100; /* Ensure it's above other content */
+}
 :root{
     --text-color: #fff;
     --bg-color: #1b1f24;
