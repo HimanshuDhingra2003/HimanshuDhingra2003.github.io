@@ -4,9 +4,15 @@ const messageBar = document.querySelector(".message-bar-input");
 const API_URL = "https://api.openai.com/v1/chat/completions";
 const API_KEY = "";
 
-while(!API_KEY){
-    API_KEY = prompt("Please enter your OpenAI API key: ");
+async function getAPIKey() {
+    while (!API_KEY) {
+        API_KEY = prompt("Please enter your OpenAI API key: ");
+        if (!API_KEY) {
+            alert("API Key is required. Please enter your API Key.");
+        }
+    }
 }
+getAPIKey();
 
 sendBtn.onclick = function () {
     if (messageBar.value.length > 0) {
