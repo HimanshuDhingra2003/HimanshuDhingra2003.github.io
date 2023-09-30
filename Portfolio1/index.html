@@ -5,20 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"> <!--box icons link-->
+    
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet"><!--Remix icon-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!--Google-Font-->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9f40da6f74.js" crossorigin="anonymous"></script>
+    
 
     <title>Portfolio</title>
 </head>
 <body>
-
+    
     <header>
-        <a href="#" class="logo">Himanshu <span>Dhingra</span></a>
-
-        <div class="bx bx-menu" id="menu-icon"></div>
-
+        <a href="#about" class="logo">Himanshu <span>Dhingra</span></a>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+    
         <ul class="navlist">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -26,11 +31,18 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
+    
         <div class="top-btn">
             <a href="#contactme" class="h-btn">Contact me</a>
         </div>
     </header>
+    
+       
+       
+
+       
+       
+       
     <section class="hero" id="home">
         <div class="main-content">
             <h4>Hi, There!</h4>
@@ -134,58 +146,60 @@
 
         <div class="portfolio-content">
             <div class="box">
+                
                 <img src="images/ImageSE.png" alt="">
                 <div class="text">
-                    <h3>Image Search Engine</h3>
+                    
+                    <a href="https://himanshudhingra2003.github.io/Image_search_engine/index.html" target="_blank"><h3>Image Search Engine</h3></a>
                     <p>HTML, CSS, Javascript</p>
                 </div>
                 <div class="icon1">
-                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <a href="https://github.com/HimanshuDhingra2003/WebDev26Projects/tree/main/Project26/Project%2026" target="_blank"><i class="ri-github-fill"></i></a>
                 </div>
                 
             </div>
 
             <div class="box">
-                <img src="images/QR-Generator.png" alt="">
+                <img  src="images/QR-Generator.png" alt="">
                 <div class="text">
-                    <h3>QR Code Generator</h3>
+                   <a href="https://himanshudhingra2003.github.io/QR_generator/index.html" target="_blank"><h3>QR Code Generator</h3></a>
                     <p>HTML, CSS, Javascript</p>
                 </div>
                 <div class="icon1">
-                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <a href="https://github.com/HimanshuDhingra2003/WebDev26Projects/tree/main/Project8/Project%208" target="_blank"><i class="ri-github-fill"></i></a>
                 </div>
             </div>
 
             <div class="box">
                 <img src="images/QuoteG.png" alt="">
                 <div class="text">
-                    <h3>Quote Generator</h3>
+                   <a href="https://himanshudhingra2003.github.io/Quote_generator/index.html"> <h3>Quote Generator</h3></a>
                     <p>HTML, CSS, Javascript</p>
                 </div>
                 <div class="icon1">
-                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <a href="https://github.com/HimanshuDhingra2003/WebDev26Projects/tree/main/Project7/Project%207"  target="_blank"><i class="ri-github-fill"></i></a>
                 </div>
             </div>
 
             <div class="box">
                 <img src="images/T2S Converter.png" alt="">
                 <div class="text">
-                    <h3>Text to Speech Converter</h3>
+                   <a href="https://himanshudhingra2003.github.io/TS_converter/inner.html" target="_blank"><h3>Text to Speech Converter</h3></a>
                     <p>HTML, CSS, Javascript</p>
                 </div>
                 <div class="icon1">
-                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <a href="https://github.com/HimanshuDhingra2003/WebDev26Projects/tree/main/Project20" target="_blank"><i class="ri-github-fill"></i></a>
                 </div>
             </div>
 
             <div class="box">
                 <img src="images/Weather.png" alt="">
                 <div class="text">
-                    <h3>Weather</h3>
+                    <a href="https://himanshudhingra2003.github.io/Weather/index.html"><h3>Weather App</h3></a>
                     <p>HTML, CSS, Javascript</p>
                 </div>
                 <div class="icon1">
-                    <a href="#"><i class="ri-github-fill"></i></a>
+                    <a href="https://github.com/HimanshuDhingra2003/WebDev26Projects/tree/main/Project1/Project%201" target="_blank"><i class="ri-github-fill"></i></a>
                 </div>
             </div>
         </section>
@@ -196,9 +210,9 @@
             </div>
 
             <div class="contact-form">
-                <form action="">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="Email Address" required>
+                <form method="post" action="https://api.sheetmonkey.io/form/p6sdQ3KjPAJmJDkHeCW4PA" name="contact-form">
+                    <input name="text"   type="text" placeholder="Your name" required>
+                    <input name="email"  type="email" placeholder="Email Address" required>
                     <textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea>
                     <input type="submit" name="" value="Submit Message" class="send-btn">
                 </form>
@@ -207,7 +221,8 @@
 
         <div class="footer">
             <div class="copyright">
-                <p>2023 Himanshu Dhingra, All Rights Reserved</p>
+                
+                <p>2023 Himanshu Dhingra &copy; All Rights Reserved</p>
             </div>
             <a href="#home" class="scroll-top"><i class="ri-arrow-up-s-fill"></i></a>
         </div>

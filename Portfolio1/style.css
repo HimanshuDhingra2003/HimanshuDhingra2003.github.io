@@ -27,20 +27,56 @@ body{
     background-color: var(--bg-color);
 }
 
-header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
+header {
+    background-color: #22282f;
+    padding: 15px 0;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 40px 16%;
-    background: transparent;
-    transition: all 0.50s ease;
+    align-items: center;
+    position: relative;
 }
 
+ul.navlist {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul.navlist li {
+    margin-right: 20px;
+}
+
+ul.navlist li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+ul.navlist li a:hover {
+    background: #1b1f24;
+    color: #fff;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#check:checked + .navlist {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+}
 .logo{
     font-size: 36px;
     color: var(--text-color);
@@ -51,29 +87,25 @@ span{
     color: var(--main-color);
 }
 
-.navlist{
-    display: flex;
 
-}
-.navlist a{
-    font-size: var(--p-font);
-    font-weight: 500;
-    color: var(--other-color);
-    margin-left: 40px;
-    transition: all 0.50s ease;
-}
 
 .navlist a:hover{
     color: var(--main-color);
     text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
 }
-
-#menu-icon{
-    font-size: 15px;
-    z-index: 10001;
-    cursor: pointer;
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 22px;
+    display: none;
+    
+}
+#check{
     display: none;
 }
+
 
 .h-btn{
     display: inline-block;
@@ -170,23 +202,26 @@ header.sticky{
     background:var(--second-bg-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    
     gap: 1rem;
+    align-items: center;
+ 
 }
 
 .about-img{
     width: 100%;
-    height: 530px;
-    max-width: 530px;
+    height: 400px;
+    max-width: 400px;
     border-radius: 50%;
     object-fit: cover;
-    border: 7px solid var(--main-color);
+    border: 8px solid var(--main-color);
     box-shadow: 0 0 20px var(--main-color);
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 12px;
+
+    margin-top: 11px auto;
 
 }
 
@@ -216,6 +251,31 @@ header.sticky{
     margin-bottom: 20px;
 
 }
+
+/* Place .about-text h2 below .about-img img using flexbox */
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the container */
+}
+
+.about-img img {
+    text-align: center;
+    width: 100%;
+    height: auto; /* Allow the image to adjust its height proportionally */
+    max-width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+    line-height: 1.3;
+    margin-top: 20px; /* Adjust margin-top to create space between img and h2 */
+}
+
 
 .exp-area{
     margin-bottom: 50px;
@@ -252,7 +312,7 @@ header.sticky{
 }
 
 .box{
-    padding: 80px 40px 66px;
+    padding: 80px 80px 80px;
     background: #2d343f;
     border-radius: 28px;
     border: 1px solid transparent;
@@ -322,18 +382,23 @@ header.sticky{
  }
 
  .box img{
-    height: auto;
-    width: 100%;
-    border-radius: 28px;
-    margin-bottom: 1.4rem;
+     height: auto; 
+     width: 100%; 
+     border-radius: 28px; 
+    margin-bottom: 1.9rem;
  }
+ 
 
 .text h3{
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
     line-height: 1.4;
+    text-decoration: none;
+    color: white;
+     
 }
+
 .text p{
     font-weight: 600;
     color: var(--other-color);
@@ -343,7 +408,7 @@ header.sticky{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: 400px;
+    margin-left: 360px;
     
     width: 55px;
     height: 55px;
@@ -416,16 +481,58 @@ form .send-btn{
 }
 
 .scroll-top{
-    display: inline flex;
-    align-items: center;
-    justify-content: center;
-    background: red;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    color: var(--text-color);
-    font-size: 27px;
-    margin-left: 1110px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    position: fixed; 
+    bottom: 20px; 
+    right: 55px; 
+    background-color: var(--main-color); 
+    padding: 10px 20px; 
+    border-radius: 200px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 2200px) {
+    
+    header {
+        padding: 20px 8%;
+    }
+    header.sticky {
+        padding: 14px 8%;
+    }
+    section {
+        padding: 90px 8% 80px;
+    }
+    .footer {
+        padding: 18px 8%;
+    }
+    .logo {
+        font-size: 28px;
+    }
+    .hero {
+        height: 90vh;
+        background-position: center;
+    }
+    .about-img img {
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        max-width: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    
 
 }
 
@@ -451,12 +558,23 @@ form .send-btn{
         height: 90vh;
         background-position: center;
     }
+    .about-img img {
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        max-width: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    
+
 }
 
 @media (max-width: 1290px) {
     
     .box {
-        padding: 40px 40px 46px;
+        padding: 4px 40px 46px;
     }
     .box img {
         width: 100%;
@@ -465,6 +583,15 @@ form .send-btn{
     }
     .box h3 {
         font-size: 20px;
+    }
+    .about-img img {
+        text-align: center;
+        width: 100%;
+        height: 300px;
+        max-width: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
     }
 }
 
@@ -491,14 +618,82 @@ form .send-btn{
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 648px) {
+    .checkbtn {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        
+        transition: transform 0.3s ease; 
+    }
+
+    #check:checked ~ .navlist {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 121px;
+        right: -100%; /* Start offscreen to the right */
+        background-color: #22282f;
+        width: 100%;
+        text-align: center;
+        z-index: 1; 
+        transition: right 0.3s ease;
+        height: 200px;
+    }
+    .navlist{
+        margin-top: 10px;
+    }
+
+    
+    
+
+    .navlist li {
+        margin-right: 0;
+        margin-bottom: 10px; 
+    }
+
+    .navlist a {
+        font-size: var(--p-font);
+        font-weight: 500;
+        color: var(--other-color);
+        margin-left: 40px;
+        transition: all 0.50s ease;
+    }
+
+    .navlist a:hover {
+        color: var(--main-color);
+        text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
+    }
+
+    .top-btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .h-btn {
+        display: none;
+        padding: 10px 20px;
+        background-color: #1b1f24;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; 
+    }
+
+    .h-btn:hover {
+        background-color: #333;
+    }
+
    
     .social {
         margin-bottom: 20px;
     }
-    #menu-icon {
-        display: block;
+    .footer {
+        padding: 14px 8%;
     }
+    
     .navlist.active {
         display: flex;
         flex-direction: column;
@@ -518,31 +713,126 @@ form .send-btn{
     .navlist .skills,
     .navlist .portfolio,
     .navlist .content {
+        display: block;
+    }
+    .about-img img {
+        text-align: center;
+        width: 100%;
+        height: 400px;
+        max-width: 400px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    
+    ul.navlist {
         display: none;
     }
-
-    #menu-icon.active {
-        
-        display: block; 
+    
+    .checkbtn {
+        display: block;
     }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    
     .navlist.active {
         display: flex; 
     }
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
+    }
 }
 
-@media (max-width: 680px) {
-     /* Adjustments for screens with max-width 680px */
-    .main-content p {
-        width: 100%;
-    }
-    .navlist .home,
-    .navlist .about,
-    .navlist .skills,
-    .navlist .portfolio,
-    .navlist .content {
-        display: none;
+
+@media (max-width: 540px) {
+    .checkbtn {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        
+        transition: transform 0.3s ease; 
     }
 
+    #check:checked ~ .navlist {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 121px;
+        right: -100%; /* Start offscreen to the right */
+        background-color: #22282f;
+        width: 100%;
+        text-align: center;
+        z-index: 1; 
+        transition: right 0.3s ease;
+        height: 200px;
+    }
+    .navlist{
+        margin-top: 10px;
+    }
+
+    
+    
+
+    .navlist li {
+        margin-right: 0;
+        margin-bottom: 10px; 
+    }
+
+    .navlist a {
+        font-size: var(--p-font);
+        font-weight: 500;
+        color: var(--other-color);
+        margin-left: 40px;
+        transition: all 0.50s ease;
+    }
+
+    .navlist a:hover {
+        color: var(--main-color);
+        text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
+    }
+
+    .top-btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .h-btn {
+        display: none;
+        padding: 10px 20px;
+        background-color: #1b1f24;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; 
+    }
+
+    .h-btn:hover {
+        background-color: #333;
+    }
+
+   
+    .social {
+        margin-bottom: 20px;
+    }
+    .footer {
+        padding: 14px 8%;
+    }
+    
     .navlist.active {
         display: flex;
         flex-direction: column;
@@ -558,22 +848,143 @@ form .send-btn{
        
     }
 
-    #menu-icon.active {
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
         
-        display: block; 
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
     }
+    .navlist .home,
+    .navlist .about,
+    .navlist .skills,
+    .navlist .portfolio,
+    .navlist .content {
+        display: block;
+    }
+    .about-img img {
+        text-align: center;
+        width: 100%;
+        height: 400px;
+        max-width: 400px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
+    }
+    
+    ul.navlist {
+        display: none;
+    }
+    
+    .checkbtn {
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    
     .navlist.active {
         display: flex; 
     }
 }
 
 @media (max-width: 470px) {
-    
-    :root {
-        --h1-font: 3rem;
-        --h2-font: 2rem;
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
+    }
+    .checkbtn {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        
+        transition: transform 0.3s ease; 
     }
 
+    #check:checked ~ .navlist {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 121px;
+        right: -100%; /* Start offscreen to the right */
+        background-color: #22282f;
+        width: 100%;
+        text-align: center;
+        z-index: 1; 
+        transition: right 0.3s ease;
+        height: 200px;
+    }
+    .navlist{
+        margin-top: 10px;
+    }
+
+    
+    
+
+    .navlist li {
+        margin-right: 0;
+        margin-bottom: 10px; 
+    }
+
+    .navlist a {
+        font-size: var(--p-font);
+        font-weight: 500;
+        color: var(--other-color);
+        margin-left: 40px;
+        transition: all 0.50s ease;
+    }
+
+    .navlist a:hover {
+        color: var(--main-color);
+        text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
+    }
+
+    .top-btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .h-btn {
+        display: none;
+        padding: 10px 20px;
+        background-color: #1b1f24;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; 
+    }
+
+    .h-btn:hover {
+        background-color: #333;
+    }
+
+   
+    .social {
+        margin-bottom: 20px;
+    }
+    .footer {
+        padding: 14px 8%;
+    }
+    
     .navlist.active {
         display: flex;
         flex-direction: column;
@@ -588,28 +999,189 @@ form .send-btn{
         font-size: 22px;
        
     }
+    .navlist .home,
+    .navlist .about,
+    .navlist .skills,
+    .navlist .portfolio,
+    .navlist .content {
+        display: block;
+    }
     .about-img img {
         text-align: center;
         width: 100%;
-        height: 300px;
-        max-width: 300px;
+        height: 400px;
+        max-width: 400px;
         border-radius: 50%;
         object-fit: cover;
         margin: 0 auto;
+    }
+    
+    ul.navlist {
+        display: none;
+    }
+    
+    .checkbtn {
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    
+    .navlist.active {
+        display: flex; 
+    }
+
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
+        
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
+    }
+}
+@media (max-width: 390px) {
+    .checkbtn {
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        display: block;
+        
+        transition: transform 0.3s ease; 
+    }
+
+    #check:checked ~ .navlist {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 121px;
+        right: -100%; /* Start offscreen to the right */
+        background-color: #22282f;
+        width: 100%;
+        text-align: center;
+        z-index: 1; 
+        transition: right 0.3s ease;
+        height: 200px;
+    }
+    .navlist{
+        margin-top: 10px;
+    }
+
+    
+    
+
+    .navlist li {
+        margin-right: 0;
+        margin-bottom: 10px; 
+    }
+
+    .navlist a {
+        font-size: var(--p-font);
+        font-weight: 500;
+        color: var(--other-color);
+        margin-left: 40px;
+        transition: all 0.50s ease;
+    }
+
+    .navlist a:hover {
+        color: var(--main-color);
+        text-shadow: 3px 3px 20px var(--main-color), -2px 1px 30px var(--text-color);
+    }
+
+    .top-btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .h-btn {
+        display: none;
+        padding: 10px 20px;
+        background-color: #1b1f24;
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease; 
+    }
+
+    .h-btn:hover {
+        background-color: #333;
+    }
+
+   
+    .social {
+        margin-bottom: 20px;
+    }
+    .footer {
+        padding: 14px 8%;
+    }
+    
+    .navlist.active {
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        position: absolute;
+        top: 60px; 
+        right: 0;
+        width: 100%;
+    }
+    .navlist.active a {
+        padding: 15px;
+        font-size: 22px;
+       
     }
     .navlist .home,
     .navlist .about,
     .navlist .skills,
     .navlist .portfolio,
     .navlist .content {
-        display: none;
+        display: block;
+    }
+    .about-img img {
+        text-align: center;
+        width: 100%;
+        height: 400px;
+        max-width: 400px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
     }
 
-    #menu-icon.active {
+    .icon1 i{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 230px;
         
-        display: block; 
+        width: 55px;
+        height: 55px;
+        font-size: 50px;
+        border-radius: 50%;
+        
+        
     }
+    
+    ul.navlist {
+        display: none;
+    }
+    
+    .checkbtn {
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    
     .navlist.active {
         display: flex; 
     }
 }
+
+
