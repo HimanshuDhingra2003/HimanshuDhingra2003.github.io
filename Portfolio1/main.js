@@ -1,8 +1,21 @@
-const header = document.querySelector("header");
+const header = document.querySelector('header');
+const sections = document.querySelectorAll('section');
 
-window.addEventListener("scroll", function(){
-    header.classList.toggle("sticky", window.scrollY > 120);
-});
+// Function to add or remove the "sticky" class based on scroll position
+function toggleStickyHeader() {
+  const scrollPosition = window.scrollY;
+  const sectionTop = sections[0].offsetTop; // Assumes the first section determines when to make the header sticky
+
+  if (scrollPosition >= sectionTop) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}
+
+window.addEventListener('scroll', toggleStickyHeader);
+window.addEventListener('resize', toggleStickyHeader); // In case the sections' positions change on window resize
+
 
 const menuIcon = document.getElementById('menu-icon');
 const navList = document.querySelector('.navlist');
@@ -90,45 +103,3 @@ if (window.matchMedia('(max-width: 950px)').matches) {
   });
 }
 
-// Code for handling smooth scrolling when links are clicked
-const navItems = document.querySelectorAll('.navlist a');
-
-navItems.forEach((item) => {
-  item.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    // Get the target from the href attribute
-    const target = item.getAttribute('href');
-
-    // Close the mobile menu (if open)
-    navList.classList.remove('active');
-    menuIcon.classList.remove('active');
-
-    // Smooth scroll to the target section
-    smoothScroll(target);
-  });
-});
-
-// Handle checkbox change (for mobile menu)
-const checkbox = document.getElementById('check');
-checkbox.addEventListener('change', () => {
-  if (checkbox.checked) {
-    navlist.style.right = '0';
-  } else {
-    navlist.style.right = '-100%';
-  }
-});
-
-// Function to scroll to the top
-function scrollToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth',
-  });
-}
-
-// Optional: Scroll to top button functionality
-const scrollToTopButton = document.getElementById('scroll-to-top-button');
-if (scrollToTopButton) {
-  scrollToTopButton.addEventListener('click', scrollToTop);
-}
