@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: orange;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333;
+            border-radius: 10px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        p {
+            font-size: 16px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            margin-top: 10px;
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy for Chatbot</h1>
+
+        <p>Last Updated: [Date]</p>
+
+        <h2>1. Introduction</h2>
+        <div class="content">
+            <p>Welcome to Chatbot ("we," "our," or "us"). At [Your Chatbot Name], we value your privacy and are committed to protecting your personal information. This Privacy Policy is designed to help you understand how we collect, use, disclose, and safeguard your data when you use our chatbot.</p>
+        </div>
+
+        <h2>2. Information We Collect</h2>
+        <div class="content">
+            <p>User-Provided Information: We may collect information that you provide when interacting with our chatbot. This may include messages, queries, and other information you share voluntarily.</p>
+            <p>Automatically Collected Information: We may automatically collect certain information about your device and usage patterns, such as your IP address, device type, operating system, and interactions with our chatbot.</p>
+        </div>
+
+        <!-- Repeat the pattern for other sections -->
+
+        <h2>8. Contact Us</h2>
+        <div class="content">
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us at [Your Contact Information].</p>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to toggle content sections
+        const toggleContent = document.querySelectorAll('h2');
+
+        toggleContent.forEach((item) => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+</body>
+</html>
